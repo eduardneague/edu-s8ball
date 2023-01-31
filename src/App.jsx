@@ -1,25 +1,26 @@
 import { useState, useEffect } from 'react'
 import Input from '../components/Input'
 import './App.css'
+import { data } from './data'
 
 function App() {
-  
   const [reading, setReading] = useState("")
   const [question, setQuestion] = useState("")
 
-  const baseURL = 'https://eightballapi.com/api'
+  const baseURL = 'https://eightballapi.com/'
   const queryString = '?question='
   
+  function randomNumber(array) {
+    return Math.ceil(Math.random() * array.length)
+  }
+
   function handleKeyDown(event) {
     if(event.key === "Enter") {
       if(event.target.value === "") {
         setReading("You have to ask me a question.")
       }
       else {
-        setQuestion(event.target.value)
-          fetch(`${baseURL}${queryString}${question}&lucky=false`)
-          .then((response) => response.json())
-          .then((data) => setReading(data.reading))
+        setReading(data[randomNumber(data)])
       }
     }
   }
@@ -30,7 +31,7 @@ function App() {
         <h1 className = "main--title">
             edu's 8ball
         </h1>
-        <h2 className = "secondary-title">ask anything </h2>
+        <h2 className = "secondary-title">ask a <span className = "yes--or--no">yes or no</span> question</h2>
           <Input
             handleKeyDown = {handleKeyDown}
           />
