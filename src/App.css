@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main--container {
+  color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: poppins;
+  aspect-ratio: 1;
+  width: 40rem;
+  background: white;
+  border-radius: 5rem;
+  box-shadow: 0 0 0 20px black;
+}
+
+.main--title {
+  font-weight: 700;
+}
+
+.input--field {
+  font-weight: 600;
+  width: 80%;
+  height: 2rem;
+  font-size: 1.5rem;
+  background: white;
+  box-shadow: 0 0 0 4px black;
+  border: none;
+  border-radius: 1rem;
+  color: black;
+  padding-left: 1rem;
+}
+
+.ball-answer {
+  font-size: 3rem;
+  margin-top: 5rem;
+  max-width: 80%;
+  text-align: center;
+  line-height: 5rem;
+}
+
+
