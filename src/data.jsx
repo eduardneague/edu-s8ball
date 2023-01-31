@@ -17,7 +17,7 @@ const data = [
     "Concentrate and ask again.",
     "Better not tell you now.",
     "As I see it, yes.",
-    "Don't count on it."
+    "Don't count on it.",
 ]
 
 export { data }

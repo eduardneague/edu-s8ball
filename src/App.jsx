@@ -8,7 +8,8 @@ function App() {
   const [question, setQuestion] = useState("")
 
   function randomNumber(array) {
-    return Math.ceil(Math.random() * array.length)
+    let randomNumber = Math.floor(Math.random() * array.length)
+      return randomNumber
   }
 
   function handleKeyDown(event) {
