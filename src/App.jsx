@@ -7,9 +7,6 @@ function App() {
   const [reading, setReading] = useState("")
   const [question, setQuestion] = useState("")
 
-  const baseURL = 'https://eightballapi.com/'
-  const queryString = '?question='
-  
   function randomNumber(array) {
     return Math.ceil(Math.random() * array.length)
   }
